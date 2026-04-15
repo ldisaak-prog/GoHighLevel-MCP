@@ -136,6 +136,11 @@ export class CalendarTools {
               type: 'boolean',
               description: 'Make calendar active immediately (default: true)',
               default: true
+            },
+            teamMembers: {
+              type: 'array',
+              items: { type: 'string' },
+              description: 'Array of user IDs to assign as team members. Required for round_robin and service_booking calendar types.'
             }
           },
           required: ['name', 'calendarType']
